@@ -1,7 +1,15 @@
+/* eslint-disable no-undef */
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-}
+/** @type {require('dotenv').config()} */
 
-module.exports = nextConfig
+const nextConfig = {
+    reactStrictMode: true,
+    compiler: {
+        styledComponents: true,
+    },
+    env: {
+        BASE_URL: process.env.BASE_URL,
+    },
+};
+
+module.exports = nextConfig;
